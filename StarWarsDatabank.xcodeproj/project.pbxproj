@@ -12,6 +12,7 @@
 		4D47302A238481A300A2E1E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D473028238481A300A2E1E1 /* Main.storyboard */; };
 		4D47302C238481A700A2E1E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D47302B238481A700A2E1E1 /* Assets.xcassets */; };
 		4D47302F238481A700A2E1E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D47302D238481A700A2E1E1 /* LaunchScreen.storyboard */; };
+		4D4730372384937F00A2E1E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4730362384937E00A2E1E1 /* SceneDelegate.swift */; };
 		DF344E7B6EAC80CA064BAEB0 /* Pods_StarWarsDatabank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD0DBE0A12D4CA9967A60E6 /* Pods_StarWarsDatabank.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		4D47302B238481A700A2E1E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D47302E238481A700A2E1E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D473030238481A700A2E1E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D4730362384937E00A2E1E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7779674EC79C29C5A68D94CF /* Pods-StarWarsDatabank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsDatabank.release.xcconfig"; path = "Target Support Files/Pods-StarWarsDatabank/Pods-StarWarsDatabank.release.xcconfig"; sourceTree = "<group>"; };
 		8DD0DBE0A12D4CA9967A60E6 /* Pods_StarWarsDatabank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsDatabank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -81,9 +83,10 @@
 				4D473022238481A300A2E1E1 /* AppDelegate.swift */,
 				4D473026238481A300A2E1E1 /* ViewController.swift */,
 				4D473028238481A300A2E1E1 /* Main.storyboard */,
-				4D47302B238481A700A2E1E1 /* Assets.xcassets */,
+				4D4730362384937E00A2E1E1 /* SceneDelegate.swift */,
 				4D47302D238481A700A2E1E1 /* LaunchScreen.storyboard */,
 				4D473030238481A700A2E1E1 /* Info.plist */,
+				4D47302B238481A700A2E1E1 /* Assets.xcassets */,
 			);
 			path = StarWarsDatabank;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 			files = (
 				4D473027238481A300A2E1E1 /* ViewController.swift in Sources */,
 				4D473023238481A300A2E1E1 /* AppDelegate.swift in Sources */,
+				4D4730372384937F00A2E1E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -334,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -352,7 +356,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KCZLU6CRX;
 				INFOPLIST_FILE = StarWarsDatabank/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,7 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7KCZLU6CRX;
 				INFOPLIST_FILE = StarWarsDatabank/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
