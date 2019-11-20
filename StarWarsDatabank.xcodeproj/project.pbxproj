@@ -15,6 +15,8 @@
 		4D4730392384986400A2E1E1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4730382384986400A2E1E1 /* SearchViewController.swift */; };
 		4D47303B2384987600A2E1E1 /* RoutableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47303A2384987600A2E1E1 /* RoutableViewController.swift */; };
 		4D47303D238498E900A2E1E1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47303C238498E900A2E1E1 /* Router.swift */; };
+		4D47303F238499B200A2E1E1 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47303E238499B200A2E1E1 /* Character.swift */; };
+		4D47304123849BF000A2E1E1 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47304023849BF000A2E1E1 /* Object.swift */; };
 		4D4730462384A7CD00A2E1E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4730452384A7CD00A2E1E1 /* DetailViewController.swift */; };
 		4D47304A2384AA7600A2E1E1 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4730482384AA7600A2E1E1 /* CharacterCell.swift */; };
 		4D47304B2384AA7600A2E1E1 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4730492384AA7600A2E1E1 /* CharacterCell.xib */; };
