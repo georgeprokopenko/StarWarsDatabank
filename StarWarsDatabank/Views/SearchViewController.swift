@@ -15,7 +15,6 @@ class SearchViewController: RoutableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupTableView()
     }
     
@@ -38,4 +37,18 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         return UITableView.automaticDimension
     }
     
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
 }

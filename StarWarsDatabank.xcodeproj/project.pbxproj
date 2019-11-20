@@ -11,7 +11,6 @@
 		4D47302A238481A300A2E1E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D473028238481A300A2E1E1 /* Main.storyboard */; };
 		4D47302C238481A700A2E1E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D47302B238481A700A2E1E1 /* Assets.xcassets */; };
 		4D47302F238481A700A2E1E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D47302D238481A700A2E1E1 /* LaunchScreen.storyboard */; };
-		4D4730372384937F00A2E1E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4730362384937E00A2E1E1 /* SceneDelegate.swift */; };
 		4D4730392384986400A2E1E1 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4730382384986400A2E1E1 /* SearchViewController.swift */; };
 		4D47303B2384987600A2E1E1 /* RoutableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47303A2384987600A2E1E1 /* RoutableViewController.swift */; };
 		4D47303D238498E900A2E1E1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D47303C238498E900A2E1E1 /* Router.swift */; };
@@ -20,6 +19,7 @@
 		4D4730462384A7CD00A2E1E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4730452384A7CD00A2E1E1 /* DetailViewController.swift */; };
 		4D47304A2384AA7600A2E1E1 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4730482384AA7600A2E1E1 /* CharacterCell.swift */; };
 		4D47304B2384AA7600A2E1E1 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D4730492384AA7600A2E1E1 /* CharacterCell.xib */; };
+		4DADB5B32385DA2F004449BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADB5B22385DA2E004449BB /* SceneDelegate.swift */; };
 		DF344E7B6EAC80CA064BAEB0 /* Pods_StarWarsDatabank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD0DBE0A12D4CA9967A60E6 /* Pods_StarWarsDatabank.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,7 @@
 		4D4730452384A7CD00A2E1E1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4D4730482384AA7600A2E1E1 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		4D4730492384AA7600A2E1E1 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		4DADB5B22385DA2E004449BB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7779674EC79C29C5A68D94CF /* Pods-StarWarsDatabank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsDatabank.release.xcconfig"; path = "Target Support Files/Pods-StarWarsDatabank/Pods-StarWarsDatabank.release.xcconfig"; sourceTree = "<group>"; };
 		8DD0DBE0A12D4CA9967A60E6 /* Pods_StarWarsDatabank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsDatabank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +81,7 @@
 				4D473020238481A300A2E1E1 /* Products */,
 				33B0AFC859775F0BF125B40D /* Pods */,
 				491476FF4AB6352E6D4C119B /* Frameworks */,
+				4DADB5B12385D42B004449BB /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,13 +97,14 @@
 			isa = PBXGroup;
 			children = (
 				4D473022238481A300A2E1E1 /* AppDelegate.swift */,
-				4D4730472384A9C200A2E1E1 /* Screens */,
+				4D4730472384A9C200A2E1E1 /* Views */,
 				4D4730432384A3E100A2E1E1 /* Router */,
 				4D4730442384A3F400A2E1E1 /* Models */,
 				4D473028238481A300A2E1E1 /* Main.storyboard */,
 				4D47302B238481A700A2E1E1 /* Assets.xcassets */,
 				4D47302D238481A700A2E1E1 /* LaunchScreen.storyboard */,
 				4D473030238481A700A2E1E1 /* Info.plist */,
+				4DADB5B22385DA2E004449BB /* SceneDelegate.swift */,
 			);
 			path = StarWarsDatabank;
 			sourceTree = "<group>";
@@ -124,14 +127,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		4D4730472384A9C200A2E1E1 /* Screens */ = {
+		4D4730472384A9C200A2E1E1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4D4730452384A7CD00A2E1E1 /* DetailViewController.swift */,
 				4D4730382384986400A2E1E1 /* SearchViewController.swift */,
 				4D47304C2384AADE00A2E1E1 /* Cells */,
 			);
-			path = Screens;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		4D47304C2384AADE00A2E1E1 /* Cells */ = {
@@ -141,6 +144,14 @@
 				4D4730492384AA7600A2E1E1 /* CharacterCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		4DADB5B12385D42B004449BB /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				4D4730362384937E00A2E1E1 /* SceneDelegate.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,10 +274,10 @@
 				4D4730392384986400A2E1E1 /* SearchViewController.swift in Sources */,
 				4D47303D238498E900A2E1E1 /* Router.swift in Sources */,
 				4D47304A2384AA7600A2E1E1 /* CharacterCell.swift in Sources */,
+				4DADB5B32385DA2F004449BB /* SceneDelegate.swift in Sources */,
 				4D47304123849BF000A2E1E1 /* Object.swift in Sources */,
 				4D47303F238499B200A2E1E1 /* Character.swift in Sources */,
 				4D473023238481A300A2E1E1 /* AppDelegate.swift in Sources */,
-				4D4730372384937F00A2E1E1 /* SceneDelegate.swift in Sources */,
 				4D4730462384A7CD00A2E1E1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
