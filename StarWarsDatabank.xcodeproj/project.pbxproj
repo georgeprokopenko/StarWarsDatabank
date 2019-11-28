@@ -23,6 +23,7 @@
 		4D480E7E238F2B840069B232 /* CachePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D480E7D238F2B840069B232 /* CachePlugin.swift */; };
 		4D480E81238F3BDC0069B232 /* SWAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D480E80238F3BDC0069B232 /* SWAPI.swift */; };
 		4D480E83238F3C130069B232 /* SWAPICharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D480E82238F3C130069B232 /* SWAPICharactersResponse.swift */; };
+		4D480E8523908C7D0069B232 /* DefaultAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D480E8423908C7D0069B232 /* DefaultAlamofireManager.swift */; };
 		4DADB5B92385EC19004449BB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADB5B82385EC19004449BB /* NetworkService.swift */; };
 		4DC343FF238C844C00E596F5 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC343FE238C844C00E596F5 /* ServiceFactory.swift */; };
 		4DCEE86F238EAED800E78E03 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEE86E238EAED800E78E03 /* NetworkProvider.swift */; };
@@ -52,6 +53,7 @@
 		4D480E7D238F2B840069B232 /* CachePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachePlugin.swift; sourceTree = "<group>"; };
 		4D480E80238F3BDC0069B232 /* SWAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAPI.swift; sourceTree = "<group>"; };
 		4D480E82238F3C130069B232 /* SWAPICharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAPICharactersResponse.swift; sourceTree = "<group>"; };
+		4D480E8423908C7D0069B232 /* DefaultAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlamofireManager.swift; sourceTree = "<group>"; };
 		4DADB5B82385EC19004449BB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4DC343FE238C844C00E596F5 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		4DCEE86E238EAED800E78E03 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
@@ -196,8 +198,9 @@
 				4D480E7F238F3B850069B232 /* Cache */,
 				4DCEE86E238EAED800E78E03 /* NetworkProvider.swift */,
 				4D480E80238F3BDC0069B232 /* SWAPI.swift */,
-				4D480E82238F3C130069B232 /* SWAPICharactersResponse.swift */,
 				4DCEE870238EB4EC00E78E03 /* SWError.swift */,
+				4D480E82238F3C130069B232 /* SWAPICharactersResponse.swift */,
+				4D480E8423908C7D0069B232 /* DefaultAlamofireManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				4DADB5B92385EC19004449BB /* NetworkService.swift in Sources */,
 				4DCEE871238EB4EC00E78E03 /* SWError.swift in Sources */,
 				4D4730462384A7CD00A2E1E1 /* DetailViewController.swift in Sources */,
+				4D480E8523908C7D0069B232 /* DefaultAlamofireManager.swift in Sources */,
 				4D480E81238F3BDC0069B232 /* SWAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

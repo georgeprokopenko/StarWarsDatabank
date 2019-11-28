@@ -15,7 +15,7 @@ final class NetworkProvider<T>: MoyaProvider<T> where T: TargetType {
                   requestClosure: @escaping RequestClosure = MoyaProvider<T>.defaultRequestMapping,
                   stubClosure: @escaping StubClosure = MoyaProvider.neverStub,
                   callbackQueue: DispatchQueue? = nil,
-                  manager: Manager = MoyaProvider<MultiTarget>.defaultAlamofireManager(),
+                  manager: Manager = DefaultAlamofireManager.managerWithTimeout,
                   plugins: [PluginType] = [],
                   trackInflights: Bool = false) {
         
