@@ -9,7 +9,15 @@
 import UIKit
 
 class RoutableViewController: UIViewController {
-    
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    var serviceFactory: ServiceFactory!
     var router: Router!
     
+    func configure(serviceFactory: ServiceFactory) {}
+}
+
+extension RoutableViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
 }

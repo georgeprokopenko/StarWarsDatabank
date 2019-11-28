@@ -11,18 +11,17 @@ import UIKit
 
 
 class CharacterCell: UITableViewCell {
+    static let identifier = "CharacterCell"
     
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var typeLabel: UILabel!
     
     override func prepareForReuse() {
         titleLabel.text = nil
-        typeLabel.text = nil
     }
     
-    func configure(title: String, type: EntityType) {
+    func configure(title: String) {
         titleLabel.text = title
-        typeLabel.text = type.localized()
     }
     
 }

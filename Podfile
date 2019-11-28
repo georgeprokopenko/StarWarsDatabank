@@ -4,7 +4,7 @@ platform :ios, '11.0'
 target 'StarWarsDatabank' do
   use_frameworks!
 
-  pod 'Realm'
+  pod 'RealmSwift'
   pod 'Moya'
 
 end
