@@ -25,7 +25,7 @@ final class NetworkProvider<T>: MoyaProvider<T> where T: TargetType {
                    callbackQueue: callbackQueue,
                    manager: manager,
                    plugins: [NetworkLoggerPlugin(), CachePlugin()],
-                   trackInflights: trackInflights)
+            trackInflights: trackInflights)
     }
 
     @discardableResult
@@ -37,7 +37,9 @@ final class NetworkProvider<T>: MoyaProvider<T> where T: TargetType {
         return super.request(target) { result in
             switch result {
             case .success(let response):
-                    if let container = try? JSONDecoder().decode(SWAPICharactersResponse<T>.self, from: response.data) {
+                    if let container = try?
+                        JSONDecoder().decode(SWAPICharactersResponse<T>.self,
+                                             from: response.data) {
                         completion(container, nil)
                     } else {
                         completion(nil, .parsingError)

@@ -9,26 +9,26 @@
 import UIKit
 
 final class DetailViewController: RoutableViewController {
-    var object: Character!
+    var viewModel: DetailViewModeling!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = object.name
+        title = viewModel.object.name
     }
 }
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Info"
+        return viewModel.headerTitle
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return object.details.count
+        return viewModel.object.details.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .value1, reuseIdentifier: nil)
-        let details = object.details[indexPath.row]
+        let details = viewModel.object.details[indexPath.row]
         cell.textLabel?.text = details.key
         cell.detailTextLabel?.text = details.value
         return cell

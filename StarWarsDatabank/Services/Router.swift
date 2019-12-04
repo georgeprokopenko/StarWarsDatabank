@@ -38,7 +38,7 @@ class Router: NSObject {
         if let search = mainStoryboard.instantiateViewController(withIdentifier: identifier)
                                                                  as? SearchViewController {
             search.router = self
-            search.configure(serviceFactory: serviceFactory)
+            search.viewModel = SearchViewModel(serviceFactory: serviceFactory)
             present(search, animated: true)
         }
     }
@@ -48,8 +48,7 @@ class Router: NSObject {
         if let detail = mainStoryboard.instantiateViewController(withIdentifier: identifier)
                                                                  as? DetailViewController {
             detail.router = self
-            detail.configure(serviceFactory: serviceFactory)
-            detail.object = object
+            detail.viewModel = DetailViewModel(character: object)
             present(detail, animated: true)
         }
     }

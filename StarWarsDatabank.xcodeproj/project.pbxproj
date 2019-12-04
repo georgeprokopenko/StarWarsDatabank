@@ -24,7 +24,13 @@
 		4D480E81238F3BDC0069B232 /* SWAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D480E80238F3BDC0069B232 /* SWAPI.swift */; };
 		4D480E83238F3C130069B232 /* SWAPICharactersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D480E82238F3C130069B232 /* SWAPICharactersResponse.swift */; };
 		4D480E8523908C7D0069B232 /* DefaultAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D480E8423908C7D0069B232 /* DefaultAlamofireManager.swift */; };
+		4D716C242398557200909DBB /* Debounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D716C232398557200909DBB /* Debounce.swift */; };
+		4D716C282398645300909DBB /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D716C272398645300909DBB /* DetailViewModel.swift */; };
 		4DADB5B92385EC19004449BB /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADB5B82385EC19004449BB /* NetworkService.swift */; };
+		4DB1E2592397176A00006CA1 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1E2582397176A00006CA1 /* Property.swift */; };
+		4DB1E25B2397179B00006CA1 /* Signal+Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1E25A2397179B00006CA1 /* Signal+Emitter.swift */; };
+		4DB1E25D239718D700006CA1 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB1E25C239718D700006CA1 /* BaseViewModel.swift */; };
+		4DB654CA2395C6ED001F1670 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB654C92395C6ED001F1670 /* SearchViewModel.swift */; };
 		4DC343FF238C844C00E596F5 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC343FE238C844C00E596F5 /* ServiceFactory.swift */; };
 		4DCEE86F238EAED800E78E03 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEE86E238EAED800E78E03 /* NetworkProvider.swift */; };
 		4DCEE871238EB4EC00E78E03 /* SWError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEE870238EB4EC00E78E03 /* SWError.swift */; };
@@ -54,7 +60,13 @@
 		4D480E80238F3BDC0069B232 /* SWAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAPI.swift; sourceTree = "<group>"; };
 		4D480E82238F3C130069B232 /* SWAPICharactersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWAPICharactersResponse.swift; sourceTree = "<group>"; };
 		4D480E8423908C7D0069B232 /* DefaultAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlamofireManager.swift; sourceTree = "<group>"; };
+		4D716C232398557200909DBB /* Debounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debounce.swift; sourceTree = "<group>"; };
+		4D716C272398645300909DBB /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		4DADB5B82385EC19004449BB /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4DB1E2582397176A00006CA1 /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		4DB1E25A2397179B00006CA1 /* Signal+Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Signal+Emitter.swift"; sourceTree = "<group>"; };
+		4DB1E25C239718D700006CA1 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		4DB654C92395C6ED001F1670 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		4DC343FE238C844C00E596F5 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		4DCEE86E238EAED800E78E03 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		4DCEE870238EB4EC00E78E03 /* SWError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWError.swift; sourceTree = "<group>"; };
@@ -115,8 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				4D473022238481A300A2E1E1 /* AppDelegate.swift */,
-				4D4730472384A9C200A2E1E1 /* Views */,
-				4D4730432384A3E100A2E1E1 /* Router */,
+				4D4730472384A9C200A2E1E1 /* Search */,
+				4D716C29239864A400909DBB /* Detail */,
+				4D4730432384A3E100A2E1E1 /* Base */,
 				4D4730442384A3F400A2E1E1 /* Models */,
 				4D662098238E90CA00A02D89 /* Services */,
 				4DCEE872238F102400E78E03 /* Network */,
@@ -129,13 +142,13 @@
 			path = StarWarsDatabank;
 			sourceTree = "<group>";
 		};
-		4D4730432384A3E100A2E1E1 /* Router */ = {
+		4D4730432384A3E100A2E1E1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				4D47303A2384987600A2E1E1 /* RoutableViewController.swift */,
-				4D47303C238498E900A2E1E1 /* Router.swift */,
+				4DB1E25C239718D700006CA1 /* BaseViewModel.swift */,
 			);
-			path = Router;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		4D4730442384A3F400A2E1E1 /* Models */ = {
@@ -146,23 +159,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		4D4730472384A9C200A2E1E1 /* Views */ = {
+		4D4730472384A9C200A2E1E1 /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				4D4730382384986400A2E1E1 /* SearchViewController.swift */,
-				4D4730452384A7CD00A2E1E1 /* DetailViewController.swift */,
-				4D47304C2384AADE00A2E1E1 /* Cells */,
+				4DB654C92395C6ED001F1670 /* SearchViewModel.swift */,
+				4D47304C2384AADE00A2E1E1 /* Table Cells */,
 			);
-			path = Views;
+			path = Search;
 			sourceTree = "<group>";
 		};
-		4D47304C2384AADE00A2E1E1 /* Cells */ = {
+		4D47304C2384AADE00A2E1E1 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
 				4D4730482384AA7600A2E1E1 /* CharacterCell.swift */,
 				4D4730492384AA7600A2E1E1 /* CharacterCell.xib */,
 			);
-			path = Cells;
+			path = "Table Cells";
 			sourceTree = "<group>";
 		};
 		4D480E7F238F3B850069B232 /* Cache */ = {
@@ -177,11 +190,21 @@
 		4D662098238E90CA00A02D89 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4D47303C238498E900A2E1E1 /* Router.swift */,
 				4DC343FE238C844C00E596F5 /* ServiceFactory.swift */,
 				4DADB5B82385EC19004449BB /* NetworkService.swift */,
 				4D2EC2FE238CA0B400894DC3 /* DatabaseService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4D716C29239864A400909DBB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4D4730452384A7CD00A2E1E1 /* DetailViewController.swift */,
+				4D716C272398645300909DBB /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		4DADB5B12385D42B004449BB /* Recovered References */ = {
@@ -208,7 +231,10 @@
 		4DED2332238DD9A6008ADE5A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4DB1E2582397176A00006CA1 /* Property.swift */,
+				4DB1E25A2397179B00006CA1 /* Signal+Emitter.swift */,
 				4DED2330238CA498008ADE5A /* UIWindow+TopViewController.swift */,
+				4D716C232398557200909DBB /* Debounce.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,14 +356,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D47303B2384987600A2E1E1 /* RoutableViewController.swift in Sources */,
+				4DB1E25D239718D700006CA1 /* BaseViewModel.swift in Sources */,
 				4D480E83238F3C130069B232 /* SWAPICharactersResponse.swift in Sources */,
 				4D4730392384986400A2E1E1 /* SearchViewController.swift in Sources */,
 				4D47303D238498E900A2E1E1 /* Router.swift in Sources */,
+				4DB654CA2395C6ED001F1670 /* SearchViewModel.swift in Sources */,
 				4DED2331238CA498008ADE5A /* UIWindow+TopViewController.swift in Sources */,
+				4D716C282398645300909DBB /* DetailViewModel.swift in Sources */,
 				4D47304A2384AA7600A2E1E1 /* CharacterCell.swift in Sources */,
 				4DC343FF238C844C00E596F5 /* ServiceFactory.swift in Sources */,
+				4D716C242398557200909DBB /* Debounce.swift in Sources */,
+				4DB1E25B2397179B00006CA1 /* Signal+Emitter.swift in Sources */,
 				4DCEE86F238EAED800E78E03 /* NetworkProvider.swift in Sources */,
 				4D2EC2FF238CA0B400894DC3 /* DatabaseService.swift in Sources */,
+				4DB1E2592397176A00006CA1 /* Property.swift in Sources */,
 				4D480E7E238F2B840069B232 /* CachePlugin.swift in Sources */,
 				4D47303F238499B200A2E1E1 /* Character.swift in Sources */,
 				4D473023238481A300A2E1E1 /* AppDelegate.swift in Sources */,

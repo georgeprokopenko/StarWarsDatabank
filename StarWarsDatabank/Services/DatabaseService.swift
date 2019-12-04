@@ -22,7 +22,7 @@ class DatabaseService<T> where T: Object {
         }
     }
     
-    func deleteObject(_ object: T) {
+    func removeObject(_ object: T) {
         do {
             let realm = try Realm()
             realm.beginWrite()
@@ -37,11 +37,12 @@ class DatabaseService<T> where T: Object {
     func savedObjects() -> [T]? {
         do {
             let realm = try Realm()
-            return realm.objects(T.self).map { $0 }
+            let obj = realm.objects(T.self)
+            return obj.map { $0 }
         }
         catch (let error) {
             print(error)
-            return nil
+            return []
         }
     }
 }
