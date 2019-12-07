@@ -21,15 +21,15 @@ protocol SearchViewModeling: BaseViewModel {
     var isLoading: Property<Bool> { get }
     
     func viewDidLoad()
-    func search(for text: String)
     func loadRecents()
+    func search(for text: String)
     func saveRecent(_ object: Character)
     func removeRecent(_ object: Character)
 }
 
 final class SearchViewModel: SearchViewModeling {
     private enum Constants {
-        static let searchDelaySeconds = 1
+        static let searchDelay = DispatchTimeInterval.milliseconds(500)
     }
     
     private(set) var networkService: NetworkService<Character>!
@@ -42,8 +42,8 @@ final class SearchViewModel: SearchViewModeling {
     init(serviceFactory: ServiceFactory) {
         networkService = serviceFactory.networkService()
         databaseService = serviceFactory.databaseService()
-        debouncedSearch = debounce(delay:
-            DispatchTimeInterval.seconds(Constants.searchDelaySeconds))
+        
+        debouncedSearch = debounce(delay:Constants.searchDelay)
         { [weak self] text in
             guard !text.isEmpty else {
                 self?.loadRecents()
