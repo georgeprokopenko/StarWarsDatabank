@@ -43,8 +43,8 @@ final class SearchViewModel: SearchViewModeling {
         networkService = serviceFactory.networkService()
         databaseService = serviceFactory.databaseService()
         
-        debouncedSearch = debounce(delay:Constants.searchDelay)
-        { [weak self] text in
+        debouncedSearch = debounce(
+                    delay: Constants.searchDelay) { [weak self] text in
             guard !text.isEmpty else {
                 self?.loadRecents()
                 self?.isLoading.value = false

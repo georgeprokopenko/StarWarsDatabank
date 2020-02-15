@@ -8,9 +8,7 @@
 
 import UIKit
 
-final class DetailViewController: RoutableViewController {
-    var viewModel: DetailViewModeling!
-    
+final class DetailViewController: RoutableViewController<DetailViewModeling> {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = viewModel.object.name

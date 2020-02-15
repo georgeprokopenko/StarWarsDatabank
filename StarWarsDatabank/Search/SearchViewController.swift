@@ -8,14 +8,14 @@
 
 import UIKit
 
-final class SearchViewController: RoutableViewController {
+final class SearchViewController: RoutableViewController<SearchViewModeling> {
     private enum Constants {
         static let cellIdentifier = CharacterCell.identifier
     }
     
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var tableView: UITableView!
-    var viewModel: SearchViewModeling!
+    @IBOutlet private weak var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,15 +24,13 @@ final class SearchViewController: RoutableViewController {
         viewModel.viewDidLoad()
     }
     
-    private func bindViewModel() {
-        viewModel.isLoading.addListener { [weak self] newValue in
-            newValue ? self?.spinner.startAnimating() : self?.spinner.stopAnimating()
+    func bindViewModel() {
+        viewModel.isLoading.addListener { [weak self] isLoading in
+            isLoading ? self?.spinner.startAnimating() : self?.spinner.stopAnimating()
         }
-        
         viewModel.mode.addListener { [weak self] _ in
             self?.reloadData()
         }
-        
         viewModel.results.addListener { [weak self] _ in
             self?.reloadData()
         }
@@ -84,7 +82,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let object = viewModel.results.value[indexPath.row]
         viewModel.saveRecent(object)
-        router.go(to: .detail(object))
+        router.go(to: .detail(object), from: self)
     }
 
     func tableView(_ tableView: UITableView,

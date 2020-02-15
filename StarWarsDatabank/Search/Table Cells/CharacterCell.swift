@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class CharacterCell: UITableViewCell {
     static let identifier = "CharacterCell"
     
@@ -23,5 +21,4 @@ class CharacterCell: UITableViewCell {
     func configure(title: String) {
         titleLabel.text = title
     }
-    
 }

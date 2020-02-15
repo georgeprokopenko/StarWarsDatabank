@@ -34,7 +34,7 @@
 		4DC343FF238C844C00E596F5 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC343FE238C844C00E596F5 /* ServiceFactory.swift */; };
 		4DCEE86F238EAED800E78E03 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEE86E238EAED800E78E03 /* NetworkProvider.swift */; };
 		4DCEE871238EB4EC00E78E03 /* SWError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DCEE870238EB4EC00E78E03 /* SWError.swift */; };
-		4DED2331238CA498008ADE5A /* UIWindow+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DED2330238CA498008ADE5A /* UIWindow+TopViewController.swift */; };
+		4DED2331238CA498008ADE5A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DED2330238CA498008ADE5A /* UIViewController+Extension.swift */; };
 		DF344E7B6EAC80CA064BAEB0 /* Pods_StarWarsDatabank.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD0DBE0A12D4CA9967A60E6 /* Pods_StarWarsDatabank.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +70,7 @@
 		4DC343FE238C844C00E596F5 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		4DCEE86E238EAED800E78E03 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		4DCEE870238EB4EC00E78E03 /* SWError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SWError.swift; sourceTree = "<group>"; };
-		4DED2330238CA498008ADE5A /* UIWindow+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+TopViewController.swift"; sourceTree = "<group>"; };
+		4DED2330238CA498008ADE5A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		7779674EC79C29C5A68D94CF /* Pods-StarWarsDatabank.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarWarsDatabank.release.xcconfig"; path = "Target Support Files/Pods-StarWarsDatabank/Pods-StarWarsDatabank.release.xcconfig"; sourceTree = "<group>"; };
 		8DD0DBE0A12D4CA9967A60E6 /* Pods_StarWarsDatabank.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarWarsDatabank.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -233,7 +233,7 @@
 			children = (
 				4DB1E2582397176A00006CA1 /* Property.swift */,
 				4DB1E25A2397179B00006CA1 /* Signal+Emitter.swift */,
-				4DED2330238CA498008ADE5A /* UIWindow+TopViewController.swift */,
+				4DED2330238CA498008ADE5A /* UIViewController+Extension.swift */,
 				4D716C232398557200909DBB /* Debounce.swift */,
 			);
 			path = Extensions;
@@ -361,7 +361,7 @@
 				4D4730392384986400A2E1E1 /* SearchViewController.swift in Sources */,
 				4D47303D238498E900A2E1E1 /* Router.swift in Sources */,
 				4DB654CA2395C6ED001F1670 /* SearchViewModel.swift in Sources */,
-				4DED2331238CA498008ADE5A /* UIWindow+TopViewController.swift in Sources */,
+				4DED2331238CA498008ADE5A /* UIViewController+Extension.swift in Sources */,
 				4D716C282398645300909DBB /* DetailViewModel.swift in Sources */,
 				4D47304A2384AA7600A2E1E1 /* CharacterCell.swift in Sources */,
 				4DC343FF238C844C00E596F5 /* ServiceFactory.swift in Sources */,

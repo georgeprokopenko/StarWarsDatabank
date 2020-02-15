@@ -15,57 +15,49 @@ enum Screen {
 
 class Router: NSObject {
     private let serviceFactory: ServiceFactory!
-    private var window: UIWindow!
-    private lazy var mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
     
     init(serviceFactory: ServiceFactory) {
         self.serviceFactory = serviceFactory
     }
     
-    func go(to screen: Screen) {
+    func go(to screen: Screen, from: UIViewController? = nil) {
+        var controller: UIViewController
+        
         switch screen {
         case .search:
-            goToSearchScreen()
+            controller = searchModule()
         case .detail(let character):
-            goToDetailScreen(character)
+            controller = detailModule(character)
+        }
+        
+        if UIApplication.shared.keyWindow != nil {
+            from?.navigationController?.pushViewController(controller, animated: true)
+        } else {
+            configureWindow(with: controller)
         }
     }
 
 // MARK: Private
     
-    private func goToSearchScreen() {
-        let identifier = String(describing: SearchViewController.self)
-        if let search = mainStoryboard.instantiateViewController(withIdentifier: identifier)
-                                                                 as? SearchViewController {
-            search.router = self
-            search.viewModel = SearchViewModel(serviceFactory: serviceFactory)
-            present(search, animated: true)
-        }
+    private func searchModule() -> SearchViewController {
+        let searchModule = SearchViewController.instantiateFromStoryboard()
+        searchModule.viewModel = SearchViewModel(serviceFactory: serviceFactory)
+        searchModule.router = self
+        return searchModule
     }
 
-    private func goToDetailScreen(_ object: Character) {
-        let identifier = String(describing: DetailViewController.self)
-        if let detail = mainStoryboard.instantiateViewController(withIdentifier: identifier)
-                                                                 as? DetailViewController {
-            detail.router = self
-            detail.viewModel = DetailViewModel(character: object)
-            present(detail, animated: true)
-        }
+    private func detailModule(_ object: Character) -> DetailViewController {
+        let detailModule = DetailViewController.instantiateFromStoryboard()
+        detailModule.viewModel = DetailViewModel(character: object)
+        detailModule.router = self
+        return detailModule
     }
     
-    private func present(_ viewController: UIViewController, animated: Bool) {
-        if let root = window?.topViewController() {
-            if root.navigationController != nil {
-                root.navigationController?.pushViewController(viewController, animated: true)
-            } else {
-                print("DEBUG: Router: no navigation controller")
-                root.present(viewController, animated: true, completion: nil)
-            }
-        } else {
-            window = UIWindow(frame: UIScreen.main.bounds)
-            let navigation = UINavigationController(rootViewController: viewController)
-            window.rootViewController = navigation
-            window.makeKeyAndVisible()
-        }
+    private var window: UIWindow!
+    private func configureWindow(with rootController: UIViewController) {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let navController = UINavigationController(rootViewController: rootController)
+        window.rootViewController = navController
+        window.makeKeyAndVisible()
     }
 }

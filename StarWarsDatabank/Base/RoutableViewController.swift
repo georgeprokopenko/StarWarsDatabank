@@ -8,12 +8,10 @@
 
 import UIKit
 
-class RoutableViewController: UIViewController {
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
+class RoutableViewController<T>: UIViewController, UIScrollViewDelegate {
+    var viewModel: T!
     var router: Router!
-}
-
-extension RoutableViewController: UIScrollViewDelegate {
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         view.endEditing(true)
     }
