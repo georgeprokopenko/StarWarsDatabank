@@ -87,13 +87,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         guard viewModel.mode.value == .recents else { return nil }
-        
-        return [ UITableViewRowAction(style: .destructive, title: "Delete") {
-            [weak self] (action, indexPath) in
-            if let object = self?.viewModel.results.value[indexPath.row] {
-                self?.viewModel.removeRecent(object)
-            }
-        } ]
+        return [
+            UITableViewRowAction(style: .destructive,
+                                 title: "Delete") { [weak self] (action, indexPath) in
+                                    if let object = self?.viewModel.results.value[indexPath.row] {
+                                        self?.viewModel.removeRecent(object)
+                                    }
+            }]
     }
 }
 
