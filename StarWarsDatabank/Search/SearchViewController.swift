@@ -64,14 +64,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
-            as? CharacterCell {
-            let character = viewModel.results.value[indexPath.row]
-            cell.configure(title: character.name)
-            return cell
-        }
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: Constants.cellIdentifier,
+            for: indexPath) as? CharacterCell else { return UITableViewCell() }
         
-        return UITableViewCell()
+        let character = viewModel.results.value[indexPath.row]
+        cell.configure(title: character.name)
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
